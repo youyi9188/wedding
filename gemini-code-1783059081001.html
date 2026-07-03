@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>魏育柏 & 李逸茜 婚禮宴席邀請</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+            background-color: #faf6f0;
+            color: #5a4b41;
+            line-height: 1.8;
+            text-align: center;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            min-height: 100vh;
+            padding-bottom: 60px;
+        }
+        /* 主視覺區塊 */
+        .hero-banner {
+            width: 100%;
+            position: relative;
+            font-size: 0;
+        }
+        .hero-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* 新人標題區 */
+        .hero-title-box {
+            padding: 40px 20px;
+            background: linear-gradient(to bottom, #fdfaf7, #ffffff);
+        }
+        .hero-title-box h1 {
+            font-size: 28px;
+            margin: 10px 0;
+            letter-spacing: 4px;
+            color: #4a3e36;
+        }
+        .hero-title-box p {
+            font-size: 15px;
+            margin: 5px 0;
+            color: #8c7662;
+            letter-spacing: 2px;
+        }
+        .date-badge {
+            display: inline-block;
+            margin-top: 15px;
+            background: #faf2ea;
+            padding: 10px 25px;
+            border-radius: 30px;
+            border: 1px solid #ebdcd0;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: #8c7662;
+        }
+        /* 通用區塊 */
+        .section {
+            padding: 45px 25px;
+            border-bottom: 1px solid #fdf8f4;
+        }
+        .section-title {
+            font-size: 19px;
+            color: #8c7662;
+            margin-bottom: 25px;
+            position: relative;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 25px;
+            height: 1.5px;
+            background-color: #c4ae94;
+            margin: 10px auto 0;
+        }
+        /* 浪漫引言 */
+        .quote-box {
+            font-style: italic;
+            color: #7d6957;
+            font-size: 14.5px;
+            line-height: 2;
+        }
+        .bible-verse {
+            font-size: 13.5px;
+            color: #a69585;
+            margin-bottom: 15px;
+            display: block;
+        }
+        /* 婚禮資訊 */
+        .info-block {
+            margin-bottom: 22px;
+            font-size: 15px;
+        }
+        .info-label {
+            font-weight: bold;
+            color: #8c7662;
+            margin-bottom: 6px;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        .info-value {
+            color: #4a3e36;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #8c7662;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 13px 40px;
+            border-radius: 25px;
+            font-size: 14px;
+            margin-top: 10px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(140, 118, 98, 0.15);
+            letter-spacing: 1px;
+        }
+        .btn:hover {
+            background-color: #73604f;
+            transform: translateY(-1px);
+        }
+        /* Dress Code */
+        .dress-code-box {
+            background-color: #faf6f0;
+            padding: 22px;
+            border-radius: 16px;
+            margin-top: 10px;
+        }
+        .color-circles {
+            margin: 18px 0;
+        }
+        .color-circle {
+            display: inline-block;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            margin: 0 10px;
+            border: 2.5px solid #fff;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+        }
+        /* 表單樣式 */
+        .rsvp-form {
+            text-align: left;
+        }
+        .form-group {
+            margin-bottom: 24px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #5a4b41;
+        }
+        .form-group label span {
+            color: #d97d7d;
+            margin-left: 4px;
+        }
+        .form-group input[type="text"], 
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ebdcd0;
+            border-radius: 10px;
+            box-sizing: border-box;
+            background-color: #faf8f5;
+            color: #5a4b41;
+            font-size: 14px;
+            transition: border 0.3s;
+        }
+        .form-group input[type="text"]:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #8c7662;
+        }
+        .radio-tile-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .radio-label {
+            display: block;
+            position: relative;
+            background: #faf8f5;
+            border: 1px solid #ebdcd0;
+            padding: 12px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        .radio-label input {
+            margin-right: 10px;
+        }
+        .submit-btn {
+            width: 100%;
+            background-color: #8c7662;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(140, 118, 98, 0.2);
+            margin-top: 10px;
+            letter-spacing: 2px;
+        }
+        .submit-btn:hover {
+            background-color: #73604f;
+        }
+        .footer {
+            padding: 40px 20px;
+            font-size: 13px;
+            color: #a69585;
+            letter-spacing: 1px;
+            background-color: #faf6f0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 主視覺圖片區 -->
+        <div class="hero-banner">
+            <!-- 直接引用您上傳的唯美婚紗照片檔名 -->
+            <img src="LINE_ALBUM_💐電子喜帖照片_260703_1.jpg" alt="育柏 & 逸茜 婚紗照">
+        </div>
+
+        <!-- 抬頭與日期 -->
+        <div class="hero-title-box">
+            <p style="text-transform: uppercase; font-size: 12px; letter-spacing: 4px; opacity: 0.7;">Wedding Invitation</p>
+            <h1>魏育柏 & 李逸茜</h1>
+            <p>誠摯邀請您參與我們的婚禮宴席</p>
+            <div class="date-badge">2026 . 11 . 14 星期六 晚宴</div>
+        </div>
+
+        <!-- 浪漫引言 -->
+        <div class="section">
+            <div class="quote-box">
+                <span class="bible-verse">「愛是恆久忍耐，又有恩慈；愛是不嫉妒，不自誇，不張狂。」<br>—— 哥林多前書 13:4</span>
+                親愛的親友們✨<br>
+                我們即將步入人生的新階段了💗<br>
+                誠摯邀請您一同見證我們的重要時刻！
+            </div>
+        </div>
+
+        <!-- 婚禮時地資訊 -->
+        <div class="section">
+            <div class="section-title">婚禮時間與地點</div>
+            
+            <div class="info-block">
+                <div class="info-label">📅 婚禮日期</div>
+                <div class="info-value">2026 年 11 月 14 日（星期六）</div>
+            </div>
+
+            <div class="info-block">
+                <div class="info-label">⏰ 宴席時間</div>
+                <div class="info-value">傍晚 16:30 證婚 & 晚宴準時開始</div>
+            </div>
+
+            <div class="info-block">
+                <div class="info-label">📍 宴客場地</div>
+                <div class="info-value">青青食尚花園會館 - 凡爾賽花園</div>
+                <div class="info-value" style="font-size: 13px; color: #8c7662; margin-top: 4px;">台北市士林區至善路二段266巷32號</div>
+            </div>
+
+            <!-- 地圖導航連結 -->
+            <a href="https://reurl.cc/YDyrmX" target="_blank" class="btn">👉 點我開啟地圖與交通指南</a>
+        </div>
+
+        <!-- Dress Code -->
+        <div class="section">
+            <div class="section-title">Dress Code 著裝守則</div>
+            <p style="font-size: 14px; margin: 0; color: #5a4b41;">為了留下最美好的回憶與合影，歡迎穿著主題色調出席：</p>
+            
+            <div class="dress-code-box">
+                <div style="font-weight: bold; color: #8c7662; font-size: 15px;">婚禮主題｜大地色系 × 甜美風格 ✨</div>
+                <div class="color-circles">
+                    <div class="color-circle" style="background-color: #f5ebe0;" title="米色"></div>
+                    <div class="color-circle" style="background-color: #e3d5ca;" title="奶茶色"></div>
+                    <div class="color-circle" style="background-color: #d5bdaf;" title="杏色"></div>
+                    <div class="color-circle" style="background-color: #a38a75;" title="咖色"></div>
+                </div>
+                <p style="font-size: 12.5px; color: #8c7662; margin: 5px 0 0 0;">💡 溫馨小提醒：現場無硬性規定，您穿得開心、舒適最重要唷！</p>
+            </div>
+        </div>
+
+        <!-- 出席回函 RSVP -->
+        <div class="section" style="border-bottom: none;">
+            <div class="section-title">出席回函表單 (RSVP)</div>
+            
+            <form class="rsvp-form" onsubmit="alert('此為靜態網頁版型展示。正式上線收集數據時，建議直接將此區塊替換為 Google 表單的內嵌程式碼 (iframe) 唷！'); return false;">
+                
+                <div class="form-group">
+                    <label>您的姓名<span>*</span></label>
+                    <input type="text" placeholder="請輸入您的姓名" required>
+                </div>
+
+                <div class="form-group">
+                    <label>您的聯絡電話<span>*</span></label>
+                    <input type="text" placeholder="請輸入聯絡電話" required>
+                </div>
+
+                <div class="form-group">
+                    <label>請問您是哪前方的親友？<span>*</span></label>
+                    <div class="radio-tile-group">
+                        <label class="radio-label"><input type="radio" name="side" required>男方親友</label>
+                        <label class="radio-label"><input type="radio" name="side">女方親友</label>
+                        <label class="radio-label"><input type="radio" name="side">共同朋友</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>請問您是否能前來共襄盛舉？<span>*</span></label>
+                    <div class="radio-tile-group">
+                        <label class="radio-label"><input type="radio" name="attend" required>受邀出席</label>
+                        <label class="radio-label"><input type="radio" name="attend">精神同在，禮到心意到</label>
+                        <label class="radio-label"><input type="radio" name="attend">抱歉無法前往</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>出席總人數（含您本人）</label>
+                    <select>
+                        <option>1 人</option>
+                        <option>2 人</option>
+                        <option>3 人</option>
+                        <option>4 人</option>
+                        <option>5 人以上</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>葷素飲食需求</label>
+                    <input type="text" placeholder="例：葷食 2 人 / 全素 1 人">
+                </div>
+
+                <div class="form-group">
+                    <label>是否需要兒童椅 / 兒童餐具？</label>
+                    <input type="text" placeholder="例：需要 1 張兒童椅">
+                </div>
+
+                <div class="form-group">
+                    <label>想對育柏 & 逸茜說的祝福話語 ❤️</label>
+                    <textarea rows="4" placeholder="寫下您對新人的滿滿祝福..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">送出回函</button>
+            </form>
+        </div>
+
+        <div class="footer">
+            ~ 期待在美好的日子與您相見 ~
+        </div>
+    </div>
+
+</body>
+</html>
